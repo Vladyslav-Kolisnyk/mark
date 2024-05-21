@@ -1,1 +1,65 @@
 @use 'reset';
+
+$font-main: Roboto, sans-serif;
+$font-mono: "Roboto Mono", sans-serif;
+
+%header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+%button {
+  border: none;
+  height: 36px;
+  width: 36px;
+  padding: 4px;
+  fill: #fff;
+}
+
+.container {
+  font-family: $font-main;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #24252D;
+  padding: 8px 1vw;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.header-logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.viewmode-buttons {
+  @extend %header-buttons;
+}
+
+.header-button {
+  @extend %button;
+  background: none;
+}
+
+.header-button:hover {
+  border-radius: 5px;
+  background: #36383E;
+}
+
+.header-button_focused {
+  @extend %button;
+  border-radius: 5px;
+  background: #6A6F82;
+}
+
+@media (max-width: 500px) {
+  .viewmode-buttons {
+    display: none;
+  }
+}
+

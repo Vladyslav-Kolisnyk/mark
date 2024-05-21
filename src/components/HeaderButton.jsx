@@ -9,7 +9,7 @@ export default function HeaderButton({
   return (
     <button
       className={isFocused
-        ? 'header-button_active'
+        ? 'header-button_focused'
         : 'header-button'
       }
       onClick={() => handleClick(args)}

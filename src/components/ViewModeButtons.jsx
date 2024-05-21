@@ -3,7 +3,7 @@ import HeaderButton from './HeaderButton.jsx';
 
 export default function ViewModeButtons({ viewMode, setViewMode }) {
   return (
-    <ul className="header-buttons">
+    <ul className="viewmode-buttons">
       <li>
         <HeaderButton
           handleClick={setViewMode}
