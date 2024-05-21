@@ -27,8 +27,8 @@ $font-mono: "Roboto Mono", sans-serif;
   background: #24252D;
   padding: 8px 1vw;
   display: flex;
-  gap: 24px;
   align-items: center;
+  gap: 24px;
 }
 
 .header-logo {
@@ -57,9 +57,37 @@ $font-mono: "Roboto Mono", sans-serif;
   background: #6A6F82;
 }
 
+.tabs {
+  display: none;
+}
+
 @media (max-width: 500px) {
   .viewmode-buttons {
     display: none;
+  }
+
+  .tabs {
+    display: flex;
+    align-items: center;    
+  }
+
+  .tabs-tab {
+    flex-basis: 100%;
+    border: none;
+    padding: 8px 1vw;
+    text-align: start;
+    font-family: $font-main;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .tabs-tab:nth-child(1) {
+    background: #3E455F;
+  }
+
+  .tabs-tab:nth-child(2) {
+    background: #50577A;
   }
 }
 
