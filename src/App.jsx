@@ -4,6 +4,7 @@ import './styles/App.scss';
 import Tabs from './components/Tabs.jsx';
 import { MarkdownInputContext } from './components/MarkdownInputContext.jsx';
 import Editor from './components/Editor.jsx';
+import Preview from './components/Preview.jsx';
 
 function App() {
   const [viewMode, setViewMode] = useState('split');
@@ -21,6 +22,8 @@ function App() {
 
         <div className="main">
           {viewMode === 'editor' && <Editor/>}
+
+          {viewMode === 'preview' && <Preview/>}
         </div>
       </MarkdownInputContext.Provider>
     </div>
