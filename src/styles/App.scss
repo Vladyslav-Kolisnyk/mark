@@ -1,11 +1,12 @@
-@use 'reset';
-
 $font-main: Roboto, sans-serif;
 $font-mono: "Roboto Mono", sans-serif;
 
 $common-paddings: 8px 1vw;
 
 %header-buttons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 8px;
 }
@@ -16,6 +17,11 @@ $common-paddings: 8px 1vw;
   width: 36px;
   padding: 4px;
   fill: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -83,6 +89,13 @@ $common-paddings: 8px 1vw;
 }
 
 .editor::placeholder {
+  color: #fff;
+}
+
+.preview {
+  flex-basis: 100%;
+  padding: $common-paddings;
+  background: #50577A;
   color: #fff;
 }
 
