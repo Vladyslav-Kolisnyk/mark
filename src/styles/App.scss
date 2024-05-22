@@ -3,6 +3,8 @@
 $font-main: Roboto, sans-serif;
 $font-mono: "Roboto Mono", sans-serif;
 
+$common-paddings: 8px 1vw;
+
 %header-buttons {
   display: flex;
   gap: 8px;
@@ -18,14 +20,14 @@ $font-mono: "Roboto Mono", sans-serif;
 
 .container {
   font-family: $font-main;
-  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .header {
   background: #24252D;
-  padding: 8px 1vw;
+  padding: $common-paddings;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -61,6 +63,29 @@ $font-mono: "Roboto Mono", sans-serif;
   display: none;
 }
 
+.main {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor {
+  flex-basis: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: $common-paddings;
+  font-family: $font-mono;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #3E455F;
+}
+
+.editor::placeholder {
+  color: #fff;
+}
+
 @media (max-width: 500px) {
   .viewmode-buttons {
     display: none;
@@ -74,7 +99,7 @@ $font-mono: "Roboto Mono", sans-serif;
   .tabs-tab {
     flex-basis: 100%;
     border: none;
-    padding: 8px 1vw;
+    padding: $common-paddings;
     text-align: start;
     font-family: $font-main;
     font-size: 1.2rem;
