@@ -1,13 +1,8 @@
 import { PropTypes } from 'prop-types';
-import { v4 } from 'uuid';
 import Tab from './Tab.jsx';
+import { tabs } from './tabsList.jsx';
 
 export default function Tabs({ setViewMode }) {
-  const tabs = [
-    { name: 'Editor', mode: 'editor', key: v4() },
-    { name: 'Editor', mode: 'preview', key: v4() },
-  ];
-
   return (
     <section className="tabs">
       {
