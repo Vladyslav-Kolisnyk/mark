@@ -12,7 +12,7 @@ export default function Tab({ children, setViewMode, mode }) {
 }
 
 Tab.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.string,
   setViewMode: PropTypes.func,
   mode: PropTypes.string,
 };
