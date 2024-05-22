@@ -2,20 +2,26 @@ import { useState } from 'react';
 import Header from './components/Header.jsx';
 import './styles/App.scss';
 import Tabs from './components/Tabs.jsx';
+import { MarkdownInputContext } from './components/MarkdownInputContext.jsx';
 
 function App() {
   const [viewMode, setViewMode] = useState('split');
+  const [markdownInput, setMarkdownInput] = useState('# Welcome!');
+
   return (
     <div className="container">
-      <Header
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-      />
-      <Tabs setViewMode={setViewMode}/>
+      <MarkdownInputContext.Provider value={[markdownInput, setMarkdownInput]}>
+        <Header
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+        />
 
-      <div className="main">
+        <Tabs setViewMode={setViewMode}/>
 
-      </div>
+        <div className="main">
+
+        </div>
+      </MarkdownInputContext.Provider>
     </div>
   );
 }
