@@ -6,6 +6,7 @@ import { MarkdownInputContext } from './components/MarkdownInputContext.jsx';
 import Editor from './components/Editor.jsx';
 import Preview from './components/Preview.jsx';
 import Split from './components/Split.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const [viewMode, setViewMode] = useState('split');
@@ -28,6 +29,8 @@ function App() {
 
           {viewMode === 'split' && <Split/>}
         </div>
+
+        <Footer/>
       </MarkdownInputContext.Provider>
     </div>
   );

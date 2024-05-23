@@ -109,6 +109,12 @@ body {
   height: 100%;
 }
 
+.footer {
+  padding: $common-paddings;
+  background: #6A6F82;
+  display: flex;
+}
+
 @media (max-width: 500px) {
   .viewmode-buttons {
     display: none;
