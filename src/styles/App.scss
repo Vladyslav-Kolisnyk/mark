@@ -27,6 +27,11 @@ $common-paddings: 8px 1vw;
   color: #fff;
 }
 
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -42,8 +47,7 @@ body {
 .header {
   background: #24252D;
   padding: $common-paddings;
-  display: flex;
-  align-items: center;
+  @extend %align-center;
   gap: 24px;
 }
 
@@ -110,9 +114,16 @@ body {
 }
 
 .footer {
-  padding: $common-paddings;
+  padding: 4px 1vw;
   background: #6A6F82;
-  display: flex;
+  @extend %align-center;
+}
+
+.footer-link {
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+  fill: #fff;
 }
 
 @media (max-width: 500px) {
