@@ -7,11 +7,11 @@ export default function Split() {
     <ScrollSync>
       <div className="split">
         <ScrollSyncPane>
-            <Editor/>
+          <Editor/>
         </ScrollSyncPane>
 
         <ScrollSyncPane>
-            <Preview/>
+          <Preview/>
         </ScrollSyncPane>
       </div>
     </ScrollSync>

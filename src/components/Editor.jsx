@@ -1,10 +1,11 @@
-import { useContext } from 'react';
+import { useContext, forwardRef } from 'react';
 import { MarkdownInputContext } from './MarkdownInputContext.jsx';
 
-export default function Editor() {
+const Editor = forwardRef((props, ref) => {
   const [markdownInput, setMarkdownInput] = useContext(MarkdownInputContext);
   return (
     <textarea
+      ref={ref}
       name="editor"
       id="editor"
       className="editor"
@@ -14,4 +15,7 @@ export default function Editor() {
       {markdownInput}
     </textarea>
   );
-}
+});
+Editor.displayName = 'Editor';
+
+export default Editor;
