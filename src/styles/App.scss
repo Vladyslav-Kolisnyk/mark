@@ -22,7 +22,6 @@ $common-paddings: 8px 1vw;
 %pane {
   overflow: auto;
   flex-basis: 100%;
-  max-height: 90vh;
   padding: $common-paddings;
   color: #fff;
 }
@@ -105,12 +104,14 @@ body {
 
 .preview {
   @extend %pane;
+  max-height: 90vh;
   background: #50577A;
 }
 
 .split {
   display: flex;
   height: 100%;
+  background: #50577A;
 }
 
 .footer {
@@ -160,6 +161,5 @@ body {
       display: none;
     }
   }
-
 }
 
