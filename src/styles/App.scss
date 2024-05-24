@@ -12,6 +12,9 @@ $common-paddings: 8px 1vw;
 }
 
 %button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   height: 36px;
   width: 36px;
