@@ -60,6 +60,11 @@ body {
   @extend %header-buttons;
 }
 
+.edit-buttons {
+  @extend %header-buttons;
+  margin-left: auto;
+}
+
 .header-button {
   @extend %button;
   background: none;
