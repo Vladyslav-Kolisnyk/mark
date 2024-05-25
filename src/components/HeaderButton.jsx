@@ -5,6 +5,7 @@ export default function HeaderButton({
   handleClick,
   args,
   isFocused = false,
+  tooltip,
 }) {
   return (
     <button
@@ -13,6 +14,7 @@ export default function HeaderButton({
         : 'header-button'
       }
       onClick={() => handleClick(args)}
+      title={tooltip}
     >
       {children}
     </button>
@@ -22,6 +24,7 @@ export default function HeaderButton({
 HeaderButton.propTypes = {
   children: PropTypes.object,
   handleClick: PropTypes.func,
-  args: PropTypes.string,
+  args: PropTypes.any,
   isFocused: PropTypes.bool,
+  tooltip: PropTypes.string,
 };
