@@ -11,9 +11,8 @@ const Editor = forwardRef((props, ref) => {
       className="editor"
       placeholder="Paste or type here..."
       onChange={(e) => setMarkdownInput(e.target.value)}
-    >
-      {markdownInput}
-    </textarea>
+      value={markdownInput}
+    ></textarea>
   );
 });
 Editor.displayName = 'Editor';
