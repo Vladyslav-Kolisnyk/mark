@@ -34,6 +34,16 @@ $common-paddings: 8px 1vw;
   align-items: center;
 }
 
+@mixin modal-button($bg) {
+  background: $bg;
+  color: #fff;
+  font-size: 1rem;
+  font-family: $font-main;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -140,6 +150,39 @@ body {
   font-size: 0.9rem;
 }
 
+.clear-modal {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  background: #24252D;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+
+.clear-button {
+  @include modal-button(#C34A4A);
+}
+
+.cancel-button {
+  @include modal-button(#6A6F82);
+}
+
 @media (max-width: 500px) {
   .viewmode-buttons {
     display: none;
@@ -172,6 +215,16 @@ body {
   .split {
     .preview {
       display: none;
+    }
+  }
+
+  .clear-modal {
+    width: 90vw;
+  }
+
+  .modal-buttons {
+    button {
+      flex-basis: 100%;
     }
   }
 }

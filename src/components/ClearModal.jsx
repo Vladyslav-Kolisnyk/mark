@@ -15,9 +15,9 @@ export default function ClearModal({ setDisplayModal }) {
         Are you sure you want to clear the editor?
       </div>
 
-      <div className="clear-buttons">
+      <div className="modal-buttons">
         <button
-          className='clear-buuton'
+          className='clear-button'
           onClick={() => {
             clearEditor();
             setDisplayModal(false);
