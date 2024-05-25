@@ -4,9 +4,8 @@ import ClipboardButton from './ClipboardButton.jsx';
 export default function EditButtons() {
   return (
     <ul className="edit-buttons">
-      <ClipboardButton/>
-
-      <ClearButton/>
+      <li><ClipboardButton/></li>
+      <li><ClearButton/></li>
     </ul>
   );
 }
