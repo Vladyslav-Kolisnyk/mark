@@ -11,6 +11,7 @@ export default function ClearButton() {
         isFocused={displayModal}
         handleClick={setDisplayModal}
         args={true}
+        tooltip="clear the editor"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

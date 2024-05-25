@@ -12,6 +12,7 @@ export default function ViewModeButtons({ viewMode, setViewMode }) {
               handleClick={setViewMode}
               args={button.mode}
               isFocused={viewMode === button.mode}
+              tooltip={button.mode}
             >
               {button.icon}
             </HeaderButton>

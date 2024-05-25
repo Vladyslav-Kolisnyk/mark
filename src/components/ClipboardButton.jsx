@@ -17,6 +17,7 @@ export default function ClipboardButton() {
     <HeaderButton
       handleClick={copyToClipboard}
       args={markdownInput}
+      tooltip="copy to clipboard"
     >
       {copied
         ? (<svg
