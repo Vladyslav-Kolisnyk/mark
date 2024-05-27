@@ -106,6 +106,8 @@ body {
 
 .editor {
   @extend %pane;
+  border-radius: 0;
+  -webkit-appearance: none;
   overflow: auto;
   resize: none;
   border: none;
