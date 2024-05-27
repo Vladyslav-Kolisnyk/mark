@@ -7,10 +7,11 @@ import Editor from './components/Editor.jsx';
 import Preview from './components/Preview.jsx';
 import Split from './components/Split.jsx';
 import Footer from './components/Footer.jsx';
+import { message } from './components/welcomeMessage.jsx';
 
 function App() {
   const [viewMode, setViewMode] = useState('split');
-  const [markdownInput, setMarkdownInput] = useState('# Welcome!');
+  const [markdownInput, setMarkdownInput] = useState(message);
 
   return (
     <div className="container">
