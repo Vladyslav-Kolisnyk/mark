@@ -34,6 +34,23 @@ $common-paddings: 8px 1vw;
   align-items: center;
 }
 
+%modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  border-radius: 5px;
+  background: #24252D;
+  color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+%heading {
+  margin: 0;
+  padding: 0;
+}
+
 @mixin modal-button($bg) {
   background: $bg;
   color: #fff;
@@ -153,22 +170,12 @@ body {
 }
 
 .clear-modal {
-  position: absolute;
-  top: 40vh;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %modal;
   width: 300px;
-  background: #24252D;
-  color: #fff;
   font-size: 1.2rem;
-  padding: 8px;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .modal-buttons {
@@ -184,6 +191,64 @@ body {
 .cancel-button {
   @include modal-button(#6A6F82);
 }
+
+.cheat-sheet {
+  @extend %modal;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cheat-headerbar {
+  @extend %align-center;
+  justify-content: space-between;
+  
+  h2 {
+    @extend %heading;
+    font-size: 1.5rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+.cheat-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 8px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.cheat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h3 {
+    @extend %heading;
+    font-size: 1.2rem;
+  }
+}
+
+.cheat-example {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background: #36383E;
+  border-radius: 5px;
+  width: fit-content;
+
+  span {
+    line-height: 25px;
+  }
+}
+
+
 
 @media (max-width: 500px) {
   .viewmode-buttons {
@@ -229,5 +294,14 @@ body {
       flex-basis: 100%;
     }
   }
+
+  .cheat-sheet {
+    width: 90vw;
+  }
 }
 
+@media (min-width: 1800px) {
+  .cheat-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
