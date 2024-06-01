@@ -61,6 +61,10 @@ $common-paddings: 8px 1vw;
   border-radius: 5px;
 }
 
+%scrollbar {
+  scrollbar-color: #6A6F82 #24252D;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -123,6 +127,7 @@ body {
 
 .editor {
   @extend %pane;
+  @extend %scrollbar;
   border-radius: 0;
   -webkit-appearance: none;
   overflow: auto;
@@ -141,6 +146,7 @@ body {
 
 .preview {
   @extend %pane;
+  @extend %scrollbar;
   max-height: 90vh;
   background: #50577A;
 }
@@ -217,6 +223,7 @@ body {
 }
 
 .cheat-body {
+  @extend %scrollbar;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 8px;
