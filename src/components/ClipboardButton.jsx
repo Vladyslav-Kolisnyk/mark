@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { MarkdownInputContext } from './MarkdownInputContext.jsx';
+import { MarkdownInputContext } from '../context/MarkdownInputContext.jsx';
 import HeaderButton from './HeaderButton.jsx';
 
 export default function ClipboardButton() {

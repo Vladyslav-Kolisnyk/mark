@@ -1,5 +1,5 @@
 import { useContext, forwardRef } from 'react';
-import { MarkdownInputContext } from './MarkdownInputContext.jsx';
+import { MarkdownInputContext } from '../context/MarkdownInputContext.jsx';
 
 const Editor = forwardRef((props, ref) => {
   const [markdownInput, setMarkdownInput] = useContext(MarkdownInputContext);

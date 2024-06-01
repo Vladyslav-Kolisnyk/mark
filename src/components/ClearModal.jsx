@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { PropTypes } from 'prop-types';
-import { MarkdownInputContext } from './MarkdownInputContext.jsx';
+import { MarkdownInputContext } from '../context/MarkdownInputContext.jsx';
 
 export default function ClearModal({ setDisplayModal }) {
   const [markdowInput, setMarkdownInput] = useContext(MarkdownInputContext);

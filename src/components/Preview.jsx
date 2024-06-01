@@ -1,6 +1,6 @@
 import { forwardRef, useContext } from 'react';
 import Markdown from 'marked-react';
-import { MarkdownInputContext } from './MarkdownInputContext.jsx';
+import { MarkdownInputContext } from '../context/MarkdownInputContext.jsx';
 
 const Preview = forwardRef((props, ref) => {
   const [markdownInput] = useContext(MarkdownInputContext);
