@@ -13,5 +13,5 @@ export default function CheatCard({ content }) {
 }
 
 CheatCard.propTypes = {
-  content: PropTypes.objext,
+  content: PropTypes.object,
 };

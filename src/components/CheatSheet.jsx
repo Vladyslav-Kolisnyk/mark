@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import CheatCard from './CheatCard.jsx';
-import { cards } from './cheatSheetContent.jsx';
+import cards from '../data/cheatSheetContent.json';
 
 export default function CheatSheet({ setDisplayCheat }) {
   return (
@@ -24,7 +24,7 @@ export default function CheatSheet({ setDisplayCheat }) {
       </div>
 
       <div className="cheat-body">
-        {cards.map((card) => <CheatCard content={card} key={card.key}/>)}
+        {cards.map((card, index) => <CheatCard content={card} key={index}/>)}
       </div>
     </div>
   );

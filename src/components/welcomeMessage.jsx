@@ -1,1 +1,0 @@
-export const message = '# Welcome!  \n## *Mark* - online markdown editor.  \nBuilt with [marked-react](https://github.com/sibiraj-s/marked-react).';

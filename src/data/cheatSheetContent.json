@@ -1,0 +1,64 @@
+[
+  {
+    "heading": "Headings",
+    "examples": [
+      "# Level 1 heading",
+      "## Level 2 heading",
+      "### Level 3 heading",
+      "#### Level 4 heading",
+      "##### Level 5 heading",
+      "###### Level 6 heading"
+    ]
+  },
+  {
+    "heading": "Text",
+    "examples": [
+      "*Italic*",
+      "**Bold**",
+      "***Bold and Italic***"
+    ]
+  },
+  {
+    "heading": "Lists",
+    "examples": [
+      "- Unordered",
+      "- List",
+      "1. Ordered",
+      "2. List",
+      "1. Nested",
+      "  1. List",
+      "- [X] Task",
+      "- [ ] List"
+    ]
+  },
+  {
+    "heading": "Horizontal Rule",
+    "examples": [
+      "- - -"
+    ]
+  },
+  {
+    "heading": "Link",
+    "examples": [
+      "[title](https://www.example.com)"
+    ]
+  },
+  {
+    "heading": "Image",
+    "examples": [
+      "![alt text](image.jpg)"
+    ]
+  },
+  {
+    "heading": "Blockquote",
+    "examples": [
+      "> blockquote"
+    ]
+  },
+  {
+    "heading": "Code",
+    "examples": [
+      "`console.log('Hello World!')"
+    ]
+  }
+]
