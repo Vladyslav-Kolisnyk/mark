@@ -6,7 +6,7 @@ export default function Counter() {
   const [markdownInput] = useContext(MarkdownInputContext);
 
   return (
-    <span className='counter'>
+    <span>
       {`Words: ${wordCounter(markdownInput)}`}
     </span>
   );

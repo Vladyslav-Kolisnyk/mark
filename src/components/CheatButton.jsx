@@ -8,10 +8,11 @@ export default function CheatButton() {
   return (
     <>
       <HeaderButton
-        handleClick={setDisplayCheat}
-        args={true}
-        isFocused={displayCheat}
-        tooltip="cheat sheet"
+        onClick={() => {
+          setDisplayCheat(true);
+        }}
+        $focused={displayCheat}
+        title="cheat sheet"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

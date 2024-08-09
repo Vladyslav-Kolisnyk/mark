@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "marked-react": "^2.0.0",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scroll-sync": "^0.11.2"
+    "react-scroll-sync": "^0.11.2",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

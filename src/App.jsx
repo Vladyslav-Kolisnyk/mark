@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme.jsx';
 import Header from './components/Header.jsx';
-import './styles/App.scss';
+import 'normalize.css';
 import Tabs from './components/Tabs.jsx';
 import { MarkdownInputContext } from './context/MarkdownInputContext.jsx';
 import Editor from './components/Editor.jsx';
@@ -9,31 +11,48 @@ import Split from './components/Split.jsx';
 import Footer from './components/Footer.jsx';
 import message from './data/welcomeMessage.json';
 
+const Container = styled.div`
+  font-family: ${(props) => props.theme.fontMain};
+  color: ${(props) => props.theme.black10};
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Main = styled.div`
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  background: ${(props) => props.theme.black80};
+`;
+
 function App() {
   const [viewMode, setViewMode] = useState('split');
   const [markdownInput, setMarkdownInput] = useState(message.message);
 
   return (
-    <div className="container">
-      <MarkdownInputContext.Provider value={[markdownInput, setMarkdownInput]}>
-        <Header
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-        />
+    <ThemeProvider theme={theme}>
+      <Container>
+        <MarkdownInputContext.Provider value={[markdownInput, setMarkdownInput]}>
+          <Header
+            viewMode={viewMode}
+            setViewMode={setViewMode}
+          />
 
-        <Tabs setViewMode={setViewMode}/>
+          <Tabs setViewMode={setViewMode}/>
 
-        <div className="main">
-          {viewMode === 'editor' && <Editor/>}
+          <Main>
+            {viewMode === 'editor' && <Editor/>}
 
-          {viewMode === 'preview' && <Preview/>}
+            {viewMode === 'preview' && <Preview/>}
 
-          {viewMode === 'split' && <Split/>}
-        </div>
+            {viewMode === 'split' && <Split/>}
+          </Main>
 
-        <Footer/>
-      </MarkdownInputContext.Provider>
-    </div>
+          <Footer/>
+        </MarkdownInputContext.Provider>
+      </Container>
+    </ThemeProvider>
   );
 }
 

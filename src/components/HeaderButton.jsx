@@ -1,30 +1,18 @@
-import { PropTypes } from 'prop-types';
+import styled from 'styled-components';
 
-export default function HeaderButton({
-  children,
-  handleClick,
-  args,
-  isFocused = false,
-  tooltip,
-}) {
-  return (
-    <button
-      className={isFocused
-        ? 'header-button_focused'
-        : 'header-button'
-      }
-      onClick={() => handleClick(args)}
-      title={tooltip}
-    >
-      {children}
-    </button>
-  );
-}
+const HeaderButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  
+  background: ${(props) => (props.$focused ? props.theme.black70 : 'none')};
 
-HeaderButton.propTypes = {
-  children: PropTypes.object,
-  handleClick: PropTypes.func,
-  args: PropTypes.any,
-  isFocused: PropTypes.bool,
-  tooltip: PropTypes.string,
-};
+  &:hover {
+    background: ${(props) => props.theme.black90}
+  }
+`;
+
+export default HeaderButton;
